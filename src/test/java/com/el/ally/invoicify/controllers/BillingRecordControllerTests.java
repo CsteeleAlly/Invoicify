@@ -20,22 +20,22 @@ public class BillingRecordControllerTests {
 	private BillingRecordRepository recordRepository;
 	private CompanyRepository companyRepository;
 	
-	@Before
-	public void setup() {
-		companyRepository = mock(CompanyRepository.class);
-		recordRepository = mock(BillingRecordRepository.class);
-		controller = new BillingRecordController(recordRepository, companyRepository);
-	}
-
-	@Test
-	public void test_list() {
-		List<BillingRecord> records = new ArrayList<BillingRecord>();
-		when(recordRepository.findAll()).thenReturn(records);
-		
-		List<BillingRecord> actual = controller.list();
-		
-		verify(recordRepository).findAll();
-		assertThat(actual).isSameAs(records);
-	}
-	
+//	@Before
+//	public void setup() {
+//		companyRepository = mock(CompanyRepository.class);
+//		recordRepository = mock(BillingRecordRepository.class);
+//		controller = new BillingRecordController(recordRepository, companyRepository);
+//	}
+//
+//	@Test
+//	public void test_list() {
+//		List<BillingRecord> records = new ArrayList<BillingRecord>();
+//		when(recordRepository.findAll()).thenReturn(records);
+//		
+//		List<BillingRecord> actual = controller.list();
+//		
+//		verify(recordRepository).findAll();
+//		assertThat(actual).isSameAs(records);
+//	}
+//	
 }
